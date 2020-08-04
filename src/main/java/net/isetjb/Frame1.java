@@ -40,11 +40,20 @@ public class Frame1 extends JInternalFrame
 {
     final static Logger log = Logger.getLogger(Frame1.class);
 
-    JButton jButton1 = new JButton("Run");
 
-    /**
-     * Constructor.
-     */
+    String column[]={"ID","UserName","Password"};
+    String data[][]={ {"login_01","aaaaa@hotmail.com","XXXXXX"},
+            {"login_02","bbbbbb@hotmail.com","XXXXXX"},
+            {"login_03","cccccc@hotmail.com","XXXXXX"}};
+
+
+    JButton jButton1 = new JButton("Run Test !!");
+    JTable jTable = new JTable(data, column);
+
+
+        /**
+         * Constructor.
+         */
     public Frame1()
     {
         log.debug("START constructor...");
@@ -65,9 +74,21 @@ public class Frame1 extends JInternalFrame
         //add compnent to the frame :
         getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER));
 
+        jTable.setBounds(30,40,300,500);
+        jTable.setShowGrid(true);
+        jTable.getColumnModel().getColumn(0).setPreferredWidth(80);
+        jTable.getColumnModel().getColumn(1).setPreferredWidth(150);
+        jTable.getColumnModel().getColumn(2).setPreferredWidth(100);
+//        jTable.setAutoCreateRowSorter(true);
+        jTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
 
+        getContentPane().add(jTable);
+
+
+        jButton1.setBounds(200,250,30,30);
         getContentPane().add(jButton1);
+
         log.debug("End of constructor.");
     }
 }
