@@ -24,10 +24,11 @@
 package net.isetjb;
 
 import net.isetjb.config.I18N;
-import java.awt.FlowLayout;
+
+import java.awt.*;
 import java.util.Random;
-import javax.swing.JButton;
-import javax.swing.JInternalFrame;
+import javax.swing.*;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -39,7 +40,7 @@ public class Frame1 extends JInternalFrame
 {
     final static Logger log = Logger.getLogger(Frame1.class);
 
-    JButton jButton1 = new JButton(" Test >> ");
+    JButton jButton1 = new JButton("Run");
 
     /**
      * Constructor.
@@ -49,21 +50,24 @@ public class Frame1 extends JInternalFrame
         log.debug("START constructor...");
 
         setTitle(I18N.lang("frame1.title"));
-        setLocation(new Random().nextInt(120) + 10, new Random().nextInt(120) + 10);
-        setSize(550, 350);
+//
+//        Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setSize(480,450);
+        setLocation(0, 0);
+
 
         setClosable(true);
         setIconifiable(true);
-        setMaximizable(false);
-        setResizable(false);
+        setMaximizable(true);
+        setResizable(true);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
 
         //add compnent to the frame :
-        getContentPane().setLayout(new FlowLayout(FlowLayout.LEFT));
+        getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER));
+
+
+
         getContentPane().add(jButton1);
-
-        setVisible(false);
-
         log.debug("End of constructor.");
     }
 }

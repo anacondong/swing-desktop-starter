@@ -64,17 +64,17 @@ public class MenuBar extends JMenuBar
         jMenuItemFrame1.setAccelerator(KeyStroke.getKeyStroke('R', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
         jMenuFile.add(jMenuItemFrame1);
 
-        jMenuFile.addSeparator();
-
-        jMenuItemQuit.setAccelerator(KeyStroke.getKeyStroke('Q', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
-        jMenuFile.add(jMenuItemQuit);
-
-        // help :
-        add(jMenuHelp);
-        jMenuHelp.setMnemonic(KeyEvent.VK_H);
-
-        jMenuItemFrameAbout.setAccelerator(KeyStroke.getKeyStroke('A', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
-        jMenuHelp.add(jMenuItemFrameAbout);
+//        jMenuFile.addSeparator();
+//
+//        jMenuItemQuit.setAccelerator(KeyStroke.getKeyStroke('Q', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+//        jMenuFile.add(jMenuItemQuit);
+//
+//        // help :
+//        add(jMenuHelp);
+//        jMenuHelp.setMnemonic(KeyEvent.VK_H);
+//
+//        jMenuItemFrameAbout.setAccelerator(KeyStroke.getKeyStroke('A', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+//        jMenuHelp.add(jMenuItemFrameAbout);
 
         log.debug("End of constructor.");
     }

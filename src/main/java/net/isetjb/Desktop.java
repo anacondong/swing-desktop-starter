@@ -67,18 +67,21 @@ public class Desktop extends JFrame
         // init frame :
         setTitle(I18N.lang("desktop.title"));
         Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds(0, 0, screenSize.width, screenSize.height);
+        setBounds(400, 150, 500, 500);
 
         // init desktop :
         getContentPane().add(jDesktopPane, BorderLayout.CENTER);
-        getContentPane().add(jLabelFooterState, BorderLayout.SOUTH);
+//        getContentPane().add(jLabelFooterState, BorderLayout.SOUTH);
 
         // add internal frames to desktop :
-        jDesktopPane.add(frameAbout);
+//        jDesktopPane.add(frameAbout);
         jDesktopPane.add(frame1);
 
         // add the menu bar :
-        setJMenuBar(menuBar);
+//        setJMenuBar(menuBar);
+
+
+        frame1.setVisible(true);
 
         // menu listeners :
         // jMenuItemQuit :
@@ -92,18 +95,7 @@ public class Desktop extends JFrame
             }
         });
 
-        // jMenuItemFrameAbout :
-        menuBar.jMenuItemFrameAbout.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent ev)
-            {
-                log.debug("ActionEvent on " + ev.getActionCommand());
-
-                frameAbout.setVisible(true);
-            }
-        });
-
-        // jMenuItemFrame1 :
+       // jMenuItemFrame1 :
         menuBar.jMenuItemFrame1.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent ev)
